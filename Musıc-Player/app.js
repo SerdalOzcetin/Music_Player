@@ -5,7 +5,6 @@ const singer = document.querySelector("#music-details .singer");
 const prev = document.querySelector("#controls #prev");
 const play = document.querySelector("#controls #play");
 const next = document.querySelector("#controls #next");
-// const audio = document.querySelector("#audio");
 const duration = document.querySelector("#duration");
 const currentTime = document.querySelector("#current-time");
 const progressBar = document.querySelector("#progress-bar");
@@ -112,7 +111,7 @@ volume.addEventListener("click", () => {
     volumeStatus = "on";
     volume.classList = "fa-solid fa-volume-high";
     volumeBar.value = 30;
-    audio.volume = 0.3;
+    audio.volume = volumeBar.value / 10;
   }
 });
 
@@ -134,12 +133,12 @@ volumeBar.addEventListener("input", (e) => {
 
 contentButton.addEventListener("click", () => {
   if (contentList.style.display === "none") {
-    setTimeout(function () {
+    setTimeout(() => {
       contentList.style.display = "block";
     }, 200);
     container.style.height = "760px";
   } else {
-    setTimeout(function () {
+    setTimeout(() => {
       contentList.style.display = "none";
     }, 30);
 
@@ -175,13 +174,20 @@ const selectedMusic = (li) => {
 
 const isPlayingNow = () => {
   for (let li of contentList.querySelectorAll("li")) {
-    if (li.classList.contains("playing02")) {
-      li.classList.remove("playing02");
-    }
+    // if (li.classList.contains("playing02")) {
+    //   li.classList.remove("playing02");
+    // }
+    li.classList.contains("playing02")
+      ? li.classList.remove("playing02")
+      : undefined;
 
-    if (li.getAttribute("li-index") == player.index) {
-      li.classList.add("playing02");
-    }
+    li.getAttribute("li-index") == player.index
+      ? li.classList.add("playing02")
+      : undefined;
+
+    // if (li.getAttribute("li-index") == player.index) {
+    //   li.classList.add("playing02");
+    // }
   }
 };
 
