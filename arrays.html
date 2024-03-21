@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numbers = [1, 5, 7, 3, 2, 67];
+
+      const products = [
+        { productName: "iphone 11", price: "12000" },
+        { productName: "iphone 12", price: "15000" },
+        { productName: "iphone 13", price: "18000" },
+        { productName: "iphone 13 pro", price: "22000" },
+      ];
+
+      //   const odds = [];
+      //   for (let number of numbers) {
+      //     if (number % 2 == 1) {
+      //       console.log(number);
+      //       odds.push(number);
+      //     }
+      //   }
+
+      //   const evenNumbersControl = (number) => number % 2 == 1;
+      //   const evenNumbers = numbers.filter(evenNumbersControl);
+
+      //   const evenNumbers = numbers.filter((number) => number % 2 == 1);
+      //   const evenNumbers = numbers.map((number) => number % 2 == 1);
+
+      //   const result = products.map((product) => product.productName);
+      const result = products
+        .filter((product) => product.price >= 15000)
+        .map((product) => product.productName);
+
+      const result02 = products.find((product) => product.price > 12000);
+
+      const resultIndex = products.findIndex(
+        (product) => product.price > 18000
+      );
+
+      console.log(result);
+      console.log(result02);
+      console.log(resultIndex);
+    </script>
+  </body>
+</html>

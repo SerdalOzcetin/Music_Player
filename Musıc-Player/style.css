@@ -1,0 +1,143 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 350px;
+  height: 565px; /*720px*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  transition: height 0.2s ease-in;
+}
+img {
+  border-radius: 20px 20px 0 0;
+}
+#controls i {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  margin-right: 20px;
+}
+.progress {
+  margin-bottom: 20px;
+}
+
+#progress-bar {
+  cursor: ew-resize;
+}
+
+#music-details .title,
+.singer {
+  font-size: 25px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.times {
+  font-size: 20px;
+  font-weight: 800;
+  padding: 5px 15px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control-buttons {
+  border-top: 1px solid black;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.volume-buttons {
+  border-top: 1px solid black;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#volume-bar {
+  width: 33%;
+  cursor: ew-resize;
+  background: #82cfd0;
+  border-radius: 8px;
+  height: 13px;
+  /* outline: none; */
+  -webkit-appearance: none;
+}
+
+#volume-bar::-webkit-slider-thumb {
+  width: 23px;
+  -webkit-appearance: none;
+  height: 23px;
+  background: black;
+  border-radius: 50%;
+}
+
+#progress-bar {
+  width: 100%;
+  background-color: #82cfd0;
+  border-radius: 8px;
+  height: 13px;
+  -webkit-appearance: none;
+}
+
+#progress-bar::-webkit-slider-thumb {
+  width: 23px;
+  -webkit-appearance: none;
+  height: 23px;
+  background: black;
+  border-radius: 50%;
+}
+
+#music-image {
+  width: 100%;
+}
+
+.content-button-bar {
+  border-top: 1px solid black;
+  padding: 20px;
+}
+
+.content-button {
+  padding: 10px 20px;
+  border-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #82cfd0;
+  transition: ease-in 0.1s;
+}
+
+.content-button:hover {
+  border-color: #82cfd0;
+  background-color: black;
+  color: #82cfd0;
+}
+
+ul li {
+  list-style: none;
+  border-top: 1px solid black;
+  padding: 15px;
+}
+
+ul {
+  padding: 0;
+  display: none;
+}
+
+.content-songs-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playing02 {
+  background-color: #82cfd0;
+}

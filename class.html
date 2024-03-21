@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function constructor
+
+      function CarES5(brand, price, model) {
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+      }
+
+      CarES5.prototype.calcAge = function () {
+        let date = new Date().getFullYear();
+        return date - this.model;
+      };
+
+      let myCar01 = new CarES5("BMW", 56000, 1999);
+      let myCar02 = new CarES5("RENO", 34000, 2000);
+
+      console.log(myCar01.calcAge());
+      console.log(myCar02.calcAge());
+
+      // class
+
+      class CarES6 {
+        constructor(brand, price, model) {
+          this.brand = brand;
+          this.model = model;
+          this.price = price;
+          console.log("object eas created!!!");
+        }
+
+        calcAge() {
+          let date = new Date().getFullYear();
+          return date - this.model;
+        }
+      }
+
+      let mrCarES6_01 = new CarES6("TOYOTA", 32000, 1987);
+      let mrCarES6_02 = new CarES6("MERCEDES", 23000, 1889);
+
+      console.log(mrCarES6_01.calcAge());
+      console.log(mrCarES6_02.calcAge());
+    </script>
+  </body>
+</html>
