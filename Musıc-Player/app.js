@@ -132,7 +132,7 @@ volumeBar.addEventListener("input", (e) => {
 });
 
 contentButton.addEventListener("click", () => {
-  if (contentList.style.display === "none") {
+  if (contentList.style.display == "none") {
     setTimeout(() => {
       contentList.style.display = "block";
     }, 200);

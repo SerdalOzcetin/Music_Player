@@ -115,7 +115,7 @@ img {
   transition: ease-in 0.1s;
 }
 
-.content-button:hover {
+.content-button:active {
   border-color: #82cfd0;
   background-color: black;
   color: #82cfd0;
